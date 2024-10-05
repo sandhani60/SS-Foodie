@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f4f4f9, #e0e0e0);
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#restaurant-name {
+    font-size: 2em;
+    color: #ffeb3b;
+    font-weight: bold;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 300px;
+    border: 2px solid #ddd;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.menu-section h2 {
+    border-bottom: 3px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: #444;
+    font-size: 1.5em;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.menu-items label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fafafa;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu-items label:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+}
+
+.menu-items img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+
+#bill {
+    background-color: orange;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 300px;
+    margin-top: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#bill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+#bill-details {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+/* Add these styles to your existing CSS */
+#payment-options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#phonepe-payment, #cash-payment {
+    background-color: #f5a10f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#payment-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@keyframes handAnimation {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#confirm-payment {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/* Add these styles to your existing CSS */
+.menu-section {
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.menu-items label {
+    margin: 5px 0;
+}
+

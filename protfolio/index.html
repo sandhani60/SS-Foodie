@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandhani Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: rgba(0, 0, 0, 0.6); 
+            position: relative;
+            font-family: 'Arial', sans-serif;
+        }
+
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(REST\ \(2\).jpg); 
+            background-size: cover;
+            background-position: center;
+            z-index: -1; 
+        }
+
+        main {
+            background-color: transparent; 
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1;
+            width: 100%;
+            box-shadow: 0px 4px 15px rgba(234, 50, 50, 0.2);
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 span {
+            animation: fall 2s ease forwards;
+            opacity: 0;
+            display: inline-block;
+        }
+
+        h1 span:nth-child(1) { animation-delay: 0s; }
+        h1 span:nth-child(2) { animation-delay: 0.1s; }
+        h1 span:nth-child(3) { animation-delay: 0.2s; }
+        h1 span:nth-child(4) { animation-delay: 0.3s; }
+        h1 span:nth-child(5) { animation-delay: 0.4s; }
+        h1 span:nth-child(6) { animation-delay: 0.5s; }
+        h1 span:nth-child(7) { animation-delay: 0.6s; }
+        h1 span:nth-child(8) { animation-delay: 0.7s; }
+
+        @keyframes fall {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Rest of your menu styles */
+        .menu-section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #0e6188;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .controls button {
+            margin-right: 10px;
+        }
+
+        /* Other button styles */
+        button {
+            padding: 10px 15px;
+            background-color:transparent;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #095073;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+       
+    </header>
+    <main>
+        <h1 class="falling">
+            <span>🅂</span>
+            <span> </span>
+            <span>🅂</span>
+            <span> </span>
+            <span>𝆑</span>
+            <span>ₒ</span>
+            <span>ₒ</span>
+            <span>D</span>
+            <span>ᵢ</span>
+            <span>ₑ</span>
+          </h1>
+          
+        
+        <div class="menu-container">
+            <!-- Starters Section -->
+             
+            <div class="menu-section">
+                <h2>Starters</h2>
+                <button class="category-btn" id="veg-starters-btn">Veg Starters</button>
+                <button class="category-btn" id="non-veg-starters-btn">Non-Veg Starters</button>
+                <div class="menu-items" id="veg-starters" style="display: none;">
+                    <label></label>
+                    <img src="PT.jpg" alt="Paneer Tikka"> 
+                    <input type="checkbox" data-price="100"> Paneer Tikka - ₹100
+                </label>
+                <label>
+                    <img src="vs.jpg" alt="Veg Spring Rolls"> 
+                    <input type="checkbox" data-price="120"> Veg Spring Rolls - ₹120
+                </label>
+                <label>
+                    <img src="hbk.jpg" alt="Hara Bhara Kebab"> 
+                    <input type="checkbox" data-price="90"> Hara Bhara Kebab - ₹90
+                </label>
+                </div>
+                <div class="menu-items" id="non-veg-starters" style="display: none;">
+                    <!-- 15 Non-Veg Starters -->
+                    <label><input type="checkbox" data-price="150"> Chicken Wings - ₹150</label>
+                    <label><input type="checkbox" data-price="130"> Mutton Seekh Kebab - ₹130</label>
+                    <label><input type="checkbox" data-price="160"> Fish Tikka - ₹160</label>
+                    <!-- Add more items up to 15 -->
+                </div>
+            </div>
+
+            <!-- Biriyani Section -->
+            <div class="menu-section">
+                <h2>Biriyani</h2>
+                <button class="category-btn" id="veg-biriyani-btn">Veg Biriyani</button>
+                <button class="category-btn" id="non-veg-biriyani-btn">Non-Veg Biriyani</button>
+                <div class="menu-items" id="veg-biriyani" style="display: none;">
+                    <!-- 15 Veg Biriyani -->
+                    <label><input type="checkbox" data-price="200"> Hyderabadi Veg Biriyani - ₹200</label>
+                    <label><input type="checkbox" data-price="220"> Lucknowi Veg Biriyani - ₹220</label>
+                    <label><input type="checkbox" data-price="210"> Kaju Pulao Biriyani - ₹210</label>
+                    <!-- Add more items up to 15 -->
+                </div>
+                <div class="menu-items" id="non-veg-biriyani" style="display: none;">
+                    <!-- 15 Non-Veg Biriyani -->
+                    <label><input type="checkbox" data-price="250"> Chicken Biriyani - ₹250</label>
+                    <label><input type="checkbox" data-price="270"> Mutton Biriyani - ₹270</label>
+                    <label><input type="checkbox" data-price="290"> Prawn Biriyani - ₹290</label>
+                    <!-- Add more items up to 15 -->
+                </div>
+            </div>
+
+            <!-- Beverages Section -->
+            <div class="menu-section">
+                <h2>Beverages</h2>
+                <button class="category-btn" id="cold-beverages-btn">Cold Beverages</button>
+                <button class="category-btn" id="hot-beverages-btn">Hot Beverages</button>
+                <div class="menu-items" id="cold-beverages" style="display: none;">
+                    <!-- 15 Cold Beverages -->
+                    <label><input type="checkbox" data-price="50"> Sprite - ₹50</label>
+                    <label><input type="checkbox" data-price="70"> Mojito - ₹70</label>
+                    <label><input type="checkbox" data-price="80"> Thickshake - ₹80</label>
+                    <!-- Add more items up to 15 -->
+                </div>
+                <div class="menu-items" id="hot-beverages" style="display: none;">
+                    <!-- 15 Hot Beverages -->
+                    <label><input type="checkbox" data-price="40"> Coffee - ₹40</label>
+                    <label><input type="checkbox" data-price="50"> Masala Tea - ₹50</label>
+                    <label><input type="checkbox" data-price="60"> Hot Chocolate - ₹60</label>
+                    <!-- Add more items up to 15 -->
+                </div>
+            </div>
+
+            <!-- Desserts Section -->
+            <div class="menu-section">
+                <h2>Desserts</h2>
+                <button class="category-btn" id="indian-desserts-btn">Indian Desserts</button>
+                <button class="category-btn" id="western-desserts-btn">Western Desserts</button>
+                <div class="menu-items" id="indian-desserts" style="display: none;">
+                    <!-- 15 Indian Desserts -->
+                    <label><input type="checkbox" data-price="100"> Gulab Jamun - ₹100</label>
+                    <label><input type="checkbox" data-price="120"> Kheer - ₹120</label>
+                    <label><input type="checkbox" data-price="130"> Rasgulla - ₹130</label>
+                    <!-- Add more items up to 15 -->
+                </div>
+                <div class="menu-items" id="western-desserts" style="display: none;">
+                    <!-- 15 Western Desserts -->
+                    <label><input type="checkbox" data-price="140"> Chocolate Brownie - ₹140</label>
+                    <label><input type="checkbox" data-price="150"> Cheesecake - ₹150</label>
+                    <label><input type="checkbox" data-price="160"> Tiramisu - ₹160</label>
+                    <!-- Add more items up to 15 -->
+                </div>
+            </div>
+        </div>
+
+        <div id="bill">
+            <h2>Total Bill</h2>
+            <p id="bill-details">Select items to see your total bill here.</p>
+        </div>
+
+        <div class="controls">
+            <button id="apply-gst">Apply GST</button>
+            <button id="apply-discount">Apply Discount</button>
+            <button id="checkout">Checkout</button>
+        </div>
+
+        <div id="payment-options" style="display: none;">
+            <h2>Select Payment Method</h2>
+            <button id="phonepe-payment">Pay with PhonePe</button>
+            <button id="cash-payment">Pay with Cash</button>
+        </div>
+
+        <div id="payment-section" style="display: none;">
+            <h2>Processing Payment</h2>
+            <img  src="payment.png"  style="width: 150px;">
+            
+        </div>
+        <button id="confirm-payment" style="display: none;">OK</button>
+        <button id="print-receipt">Print Receipt</button>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
